@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Flex} from "@chakra-ui/react";
+import TodoContainer from "./components/TodoContainer/TodoContainer";
+import BottomBar from "./components/BottomBar/BottomBar";
+import AlertMessage from "./components/AlertMessage/AlertMessage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <Flex w="100%" h="100vh" display="flex" align="center" justify="center">
+            <AlertMessage/>
+            <TodoContainer/>
+            <BottomBar/>
+        </Flex>
+    );
 }
 
 export default App;
